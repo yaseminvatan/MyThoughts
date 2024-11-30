@@ -1,10 +1,11 @@
+import { getPosts, toggleTheme } from './logic.js';
 // Wait for the DOM to fully load before running the script
 document.addEventListener('DOMContentLoaded', () => {
     // Get the container where blog posts will be displayed
     const postsContainer = document.getElementById('posts-container');
     
     // Retrieve posts from localStorage or initialize an empty array if none exist
-    const posts = JSON.parse(localStorage.getItem('posts')) || [];
+    const posts = getPosts;
 
     // If there are no posts, display a message and exit
     if (posts.length === 0) {
@@ -38,7 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     
     // Add a click event listener to toggle between light and dark modes
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode'); // Toggle the dark-mode class on the body
-    });
+    themeToggle.addEventListener('click', toggleTheme);
 });
