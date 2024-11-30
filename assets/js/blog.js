@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const postsContainer = document.getElementById('posts-container');
     
     // Retrieve posts from localStorage or initialize an empty array if none exist
-    const posts = getPosts;
+    const posts = getPosts();
 
     // If there are no posts, display a message and exit
     if (posts.length === 0) {
