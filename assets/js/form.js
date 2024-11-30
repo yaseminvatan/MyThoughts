@@ -1,4 +1,4 @@
-import { getPosts } from "./logic";
+import { savePosts, getPosts, validateForm } from "./logic.js";
 
 // Add an event listener to handle form submission
 document.getElementById('blog-form').addEventListener('submit', (event) => {
